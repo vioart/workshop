@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources Page</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Heroicons -->
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@1.0.6/umd/heroicons.min.js"></script>
+
+    <style>
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(84, 172, 191, 0.18), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(38, 101, 140, 0.18), transparent 30%),
+                #06121f;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glow:hover {
+            box-shadow: 0 0 30px rgba(84, 172, 191, 0.35);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen text-white flex items-center justify-center px-6 py-12">
+
+    <div class="max-w-6xl w-full">
+
+        <!-- Header -->
+        <div class="text-center mb-14 fade-up">
+            <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tight">
+                My Resources
+            </h1>
+
+            <p class="text-slate-300 text-lg max-w-2xl mx-auto">
+                Kumpulan link penting untuk presentasi, dataset, dan project.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Canva -->
+            <div class="glass glow rounded-3xl p-8 transition duration-300 hover:-translate-y-2 fade-up floating">
+                <div class="w-16 h-16 rounded-2xl bg-cyan-500/20 flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-palette text-3xl text-cyan-300"></i>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-3">Canva Design</h2>
+
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Akses desain presentasi dan asset visual yang digunakan dalam project.
+                </p>
+
+                <a href="https://canva.link/lzq295scyalcu4w" target="_blank"
+                    class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 transition px-5 py-3 rounded-xl font-semibold">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Kunjungi
+                </a>
+            </div>
+
+            <!-- Dataset -->
+            <div class="glass glow rounded-3xl p-8 transition duration-300 hover:-translate-y-2 fade-up floating"
+                style="animation-delay: 0.2s;">
+                <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-database text-3xl text-emerald-300"></i>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-3">Dataset</h2>
+
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Download dataset yang digunakan untuk training machine learning.
+                </p>
+
+                <a href="https://www.kaggle.com/datasets/alessiocorrado99/animals10" target="_blank"
+                    class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 transition px-5 py-3 rounded-xl font-semibold">
+                    <i class="fa-solid fa-download"></i>
+                    Download
+                </a>
+            </div>
+
+            <!-- Project -->
+            <div class="glass glow rounded-3xl p-8 transition duration-300 hover:-translate-y-2 fade-up floating"
+                style="animation-delay: 0.4s;">
+                <div class="w-16 h-16 rounded-2xl bg-indigo-500/20 flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-code text-3xl text-indigo-300"></i>
+                </div>
+
+                <h2 class="text-2xl font-bold mb-3">Project</h2>
+
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Download source code project machine learning/deep learning yang digunakan pada workshop.
+                </p>
+
+                <a href="/download/project"
+                    class="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-400 transition px-5 py-3 rounded-xl font-semibold">
+                    <i class="fa-solid fa-download"></i>
+                    Download
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
