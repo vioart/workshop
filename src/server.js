@@ -16,11 +16,6 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/download/project', (req, res) => {
-  const filePath = path.join(__dirname, '../public/files/project.zip');
-  res.download(filePath);
-});
-
 // Server
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
